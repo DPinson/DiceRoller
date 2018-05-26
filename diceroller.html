@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Un set de dés</title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			Choisir le nombre de faces du dé : <input v-model.number="faces" placeholder="Choose your dice" type="number"></input><br>
+			D{{ faces }}<br>
+	        Voici le résultat : {{calcul()}}
+
+
+		   <!--
+			<ol>
+				<li v-for="todo in todos">
+					{{ todo.text }}*{{faces}}+1
+				</li>
+			</ol>
+		   a {{result}}-->
+		</div>
+
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					faces: '',
+				/*	result: (Math.floor(Math.random()*6)+1),
+					todos: [
+						{ text: Math.floor(Math.random()) }
+					],
+				*/	calcul : function() {
+						return (Math.floor(Math.random()*this.faces))+1;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
+
+
+<!-- utiliser des  -->
