@@ -1,2 +1,2 @@
 # dice
-Some kind of dice roller
+Some kind of dice roller, using Vue.js
